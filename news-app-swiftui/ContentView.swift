@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var apiManager = ApiManager()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(apiManager.posts, rowContent: { post in
+                    NavigationLink(
+                        destination: DetailView(url: post.url)
+                    ) {
+                        HStack {
+                            Text(String(post.points))
+                            Text(post.title)
+                        }
+                        .foregroundColor(.black)
+                    }
+
+                
+            })
+            .navigationBarTitle("News")
+        }
+        .onAppear(perform: {
+            self.apiManager.request()
+        })
     }
 }
 
@@ -19,3 +38,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+

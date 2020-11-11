@@ -1,17 +1,17 @@
+////
+////  news_app_swiftuiApp.swift
+////  news-app-swiftui
+////
+////  Created by Илья Дернов on 11.11.2020.
+////
 //
-//  news_app_swiftuiApp.swift
-//  news-app-swiftui
+//import SwiftUI
 //
-//  Created by Илья Дернов on 11.11.2020.
-//
-
-import SwiftUI
-
-@main
-struct news_app_swiftuiApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
-}
+//@main
+//struct news_app_swiftuiApp: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            ContentView()
+//        }
+//    }
+//}
